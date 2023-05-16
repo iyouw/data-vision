@@ -1,2 +1,6 @@
 packages:
-  - packages/*
+  - packages/component
+  - packages/designer
+  - packages/model
+  - packages/runtime
+  - packages/vision

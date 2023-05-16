@@ -5,6 +5,6 @@ module.exports = {
     "stylelint-config-rational-order",
   ],
   rules: {
-    "selector-max-id": 0,
+    "selector-max-id": 1,
   },
 };
