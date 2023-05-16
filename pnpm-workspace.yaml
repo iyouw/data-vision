@@ -1,6 +1,6 @@
 packages:
   - packages/component
   - packages/designer
-  - packages/model
+  - packages/dom
   - packages/runtime
   - packages/vision
