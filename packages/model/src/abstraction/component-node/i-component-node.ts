@@ -1,4 +1,4 @@
-import { IComponentType } from "src/component-type";
+import { IComponentType } from "src/abstraction/component-type";
 
 export interface IComponentNode {
   type: IComponentType;

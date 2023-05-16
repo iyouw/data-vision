@@ -3,6 +3,7 @@ import type { IComponentSlotType } from "./i-component-slot-type";
 
 export interface IComponentType {
   name: string;
+  icon: string;
   props: Array<IComponentPropType>;
   slots: Array<IComponentSlotType>;
 }
