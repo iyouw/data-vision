@@ -5,5 +5,6 @@ export interface IPropType {
   type: PropValueType
   children: Array<IPropType>
   required?: boolean
-  default?: unknown
+  defaultValue?: unknown
+  createProp(): Record<string, unknown>
 }

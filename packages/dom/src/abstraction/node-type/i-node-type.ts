@@ -6,4 +6,5 @@ export interface INodeType {
   icon: string
   props: Array<IPropType>
   slots: Array<ISlotType>
+  createProps(): Record<string, unknown>
 }

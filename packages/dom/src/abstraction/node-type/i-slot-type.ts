@@ -1,4 +1,4 @@
 export interface ISlotType {
   name: string
-  scope: Record<string, unknown>
+  scope?: Record<string, unknown>
 }
