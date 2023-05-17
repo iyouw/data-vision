@@ -1,2 +1,2 @@
-export * from './abstraction'
-export * from './core'
+export * from './abstraction';
+export * from './core';

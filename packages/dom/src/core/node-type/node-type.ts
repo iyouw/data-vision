@@ -1,13 +1,13 @@
-import type { INodeType, IPropType, ISlotType } from '../../abstraction'
+import type { INodeType, IPropType, ISlotType } from '../../abstraction';
 
 export class NodeType implements INodeType {
-  public name: string
+  public name: string;
 
-  public icon: string
+  public icon: string;
 
-  public props: Array<IPropType>
+  public props: Array<IPropType>;
 
-  public slots: Array<ISlotType>
+  public slots: Array<ISlotType>;
 
   public constructor(
     name: string,
@@ -15,13 +15,13 @@ export class NodeType implements INodeType {
     props: Array<IPropType> = [],
     slots: Array<ISlotType> = []
   ) {
-    this.name = name
-    this.icon = icon
-    this.props = props
-    this.slots = slots
+    this.name = name;
+    this.icon = icon;
+    this.props = props;
+    this.slots = slots;
   }
 
   public createProps(): Record<string, unknown> {
-    return Object.assign({}, ...this.props.map((x) => x.createProp()))
+    return Object.assign({}, ...this.props.map((x) => x.createProp()));
   }
 }

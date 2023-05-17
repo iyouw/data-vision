@@ -1,15 +1,15 @@
-import type { IPropType, PropValueType } from '../../abstraction'
+import type { IPropType, PropValueType } from '../../abstraction';
 
 export class PropType implements IPropType {
-  public name: string
+  public name: string;
 
-  public type: PropValueType
+  public type: PropValueType;
 
-  public children: Array<IPropType>
+  public children: Array<IPropType>;
 
-  public required?: boolean
+  public required?: boolean;
 
-  public defaultValue?: unknown
+  public defaultValue?: unknown;
 
   public constructor(
     name: string,
@@ -18,17 +18,17 @@ export class PropType implements IPropType {
     required?: boolean,
     defaultValue?: unknown
   ) {
-    this.name = name
-    this.type = type
-    this.children = children
-    this.required = required
-    this.defaultValue = defaultValue
+    this.name = name;
+    this.type = type;
+    this.children = children;
+    this.required = required;
+    this.defaultValue = defaultValue;
   }
 
   public createProp(): Record<string, unknown> {
     return {
       [this.name]: this.resolveValue()
-    }
+    };
   }
 
   protected resolveValue(): unknown {
@@ -42,6 +42,6 @@ export class PropType implements IPropType {
       ? false
       : this.type === 'array'
       ? []
-      : Object.assign({}, ...this.children.map((x) => x.createProp()))
+      : Object.assign({}, ...this.children.map((x) => x.createProp()));
   }
 }
