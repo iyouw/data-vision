@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "allowJs": false,
     "target": "ES2015",
     "moduleResolution": "node",
     "isolatedModules": true,
     "strict": true,
     "strictNullChecks": true,
+    "lib": ["DOM", "ES2015"],
   }
 }

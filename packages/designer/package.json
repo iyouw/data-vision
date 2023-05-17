@@ -4,9 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "startup": "pnpm build",
+    "dev": "node scripts/build.mjs -w",
+    "build": "pnpm clean && pnpm build:bundle && pnpm build:types",
+    "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
+    "build:bundle": "node scripts/build.mjs",
+    "build:dev": "tsc",
+    "clean": "rimraf ./dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@data-vision/dom":"workspace: *"
+  }
 }
